@@ -126,6 +126,8 @@ let walkDirectory = (services, directoryPath) => {
 
         }
         else {
+            if (file.startsWith(".")) return;
+            
             if (file.endsWith(serviceExtension)) {
                 debug('is a service file');
 
